@@ -2,7 +2,9 @@ stages:
   - deploy
 
 deploy:
-  image: lachlanevenson/k8s-kubectl:latest
+  image:
+    name: lachlanevenson/k8s-kubectl:latest
+    entrypoint: [""]
   stage: deploy
   script:
     - version
