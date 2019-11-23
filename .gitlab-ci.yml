@@ -1,7 +1,7 @@
 stages:
   - deploy
 
-# deploy:
+deploy:
 #   image:
 #     name: lachlanevenson/k8s-kubectl:latest
 #     entrypoint: [""]
