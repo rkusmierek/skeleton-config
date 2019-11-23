@@ -7,5 +7,5 @@ deploy:
     entrypoint: [""]
   stage: deploy
   script:
-    - version
-    - apply -k ./app/base/ 
+    - kubectl version
+    - kubectl apply -k ./app/base/
