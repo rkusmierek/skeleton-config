@@ -1,5 +1,11 @@
 stages:
+  - build
   - deploy
+
+build:
+  stage: build
+  script:
+    - env
 
 deploy:
   stage: deploy
