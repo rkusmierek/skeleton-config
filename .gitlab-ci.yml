@@ -1,0 +1,6 @@
+deploy:
+  image: lachlanevenson/k8s-kubectl:latest
+  stage: deploy
+  script:
+    - kubectl version
+    - kubectl apply -k ./app/base/ 
