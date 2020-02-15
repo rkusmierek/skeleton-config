@@ -1,7 +1,7 @@
-USAGE="$(basename $0) SERVICE TAG"
+USAGE="$(basename $0) IMAGE TAG"
 
 [ "$1" ] || {
-    echo "Service name is missing!"
+    echo "Service image name is missing!"
     echo "Usage: $USAGE"
     exit 1
 }
@@ -12,7 +12,7 @@ USAGE="$(basename $0) SERVICE TAG"
     exit 2
 }
 
-SRV=$1
+IMAGE=$1
 TAG=$2
 
-sed -ri "s|(image: [^:]*):.*|\1:${TAG}|" ./app/base/$SRV/*deployment.yml
+sed -ri "s|(image: ${IMAGE}):.*|\1:${TAG}|" ./app/base/*/*deployment.yml
