@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: skeleton-frontend
-        image: skltn/skeleton-frontend:717
+        image: skltn/skeleton-frontend:719
         env:
         - name: GATEWAY_URL
           value: "http://agent-portal-gateway"
